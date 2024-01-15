@@ -22,7 +22,7 @@
 						<h1 id="user-name">{{ .Site.Params.Name }}</h1>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row pt-2">
 					<div class="col-xs-12 user-social text-center">
 					{{ partial "social.html" . }}
 					</div>
@@ -30,7 +30,7 @@
 				{{ with .Site.Params.About }}
 				<div class="row">
 					<div class="col-lg-6 offset-lg-3 user-description text-center">
-						{{ . }}
+						{{ .|safeHTML }}
 					</div>
 				</div>
 				{{ end }}
